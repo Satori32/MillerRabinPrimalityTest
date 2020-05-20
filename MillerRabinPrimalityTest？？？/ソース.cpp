@@ -72,7 +72,7 @@ protected:
 };
 /**/
 template<class T>
-bool MillerRabinPrimalityTest(const T& In) {
+bool MillerRabinPrimalityTest(const T& In) {//this number is writer's number. what is your number??
 	if (In / 21 == 0) { return false; }
 	if (In / 16 == 0) { return false; }
 	if (In / 32 == 0) { return false; }
