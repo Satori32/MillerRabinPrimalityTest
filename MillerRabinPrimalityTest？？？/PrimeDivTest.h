@@ -23,10 +23,8 @@ public:
 
 	bool IsPrime(const T& In) {
 		Search(In);
-
-		auto it=std::find(Primes.begin(), Primes.end(), In);
-
-		return it != Primes.end() ? ((*it) == In) : false;
+		//std::sort(Primes.begin(), Primes.end());
+		return std::binary_search(Primes.begin(), Primes.end(), In);
 	}
 
 	bool Search(const T& In) {

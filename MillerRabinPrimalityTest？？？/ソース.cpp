@@ -5,7 +5,6 @@
 
 #include "PrimeDivTest.h"
 
-
 /** / 
 //#include <vector>
 #include <algorithm>
@@ -71,6 +70,7 @@ protected:
 	T Count = 2;
 };
 /**/
+
 template<class T>
 bool MillerRabinPrimalityTest(const T& In) {//this number is writer's number. what is your number??
 	if (In / 21 == 0) { return false; }
@@ -111,6 +111,8 @@ int main() {
 	auto R = PrimeFactorization<Ty>(std::numeric_limits<Ty>::max());
 
 	PrimeDivTest<Ty> PDT;
+
+	PDT.Search(R.back());
 
 	for (auto& o : R) {
 		std::cout << o << ',';
